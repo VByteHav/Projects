@@ -41,18 +41,23 @@ function App() {
   }
 
   const handleDelete= (e, id)=>{  
-    let newTodos = todos.filter(item=>{
-      return item.id!==id
-    }); 
-    setTodos(newTodos) 
-    saveToLS()
+    let newTodos = todos.filter(item => item.id !== id);
+    setTodos(newTodos);  
+    setTimeout(() => { 
+      localStorage.setItem("todos", JSON.stringify(newTodos));  
+    }, 0);
   }
+  
 
-  const handleAdd= ()=>{
-    setTodos([...todos, {id: uuidv4(), todo, isCompleted: false}])
-    setTodo("") 
-    saveToLS()
+  const handleAdd = () => {
+    let newTodos = [...todos, { id: uuidv4(), todo, isCompleted: false }];
+    setTodos(newTodos);
+    setTodo("");
+    setTimeout(() => { 
+      localStorage.setItem("todos", JSON.stringify(newTodos));  
+    }, 0);
   }
+  
   
   const handleChange= (e)=>{ 
     setTodo(e.target.value)
@@ -74,7 +79,7 @@ function App() {
     < >
     <Navbar/> 
        <div className="mx-3 md:container md:mx-auto my-5 rounded-xl p-5 bg-violet-100 min-h-[80vh] md:w-[35%]">
-        <h1 className='font-bold text-center text-3xl'>Shigoto  - Manage your todos at one place</h1>
+        <h1 className='font-bold text-center text-3xl'>Shigoto - Manage your todos at one place</h1>
          <div className="addTodo my-5 flex flex-col gap-4">
           <h2 className='text-2xl font-bold'>Add a Todo</h2>
           <div className="flex">

@@ -6,12 +6,7 @@ export default {
   ],
   theme: {
     extend: {
-      fontSize: {
-        '20px': '20px', // Custom font size
-      },
-      screens: {
-        'below-417': {'max': '416px'}, // Custom breakpoint
-      },
+    
     },
   },
   plugins: [],
