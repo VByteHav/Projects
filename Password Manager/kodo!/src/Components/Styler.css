@@ -1,0 +1,9 @@
+@media (max-width: 399px) {
+    /* Your styles for screens below 399px */
+  .l{
+    font-size: 15px;
+  }
+  .s{
+    font-size: 10px;
+  }
+}
