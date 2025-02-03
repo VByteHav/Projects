@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 
 ## About the App
 
-- Its i a responsive Todo Web App that Allows you to Manage your Tasks!
+- Its i a Vite+React responsive Todo Web App that Allows you to Manage your Tasks!
 
 
 ## Pre Requirements
