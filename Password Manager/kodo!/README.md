@@ -15,7 +15,7 @@ That is about the app :)
 ### Pre Requirements -
 - Make Sure you Have latest version of npm and nodejs
 ### HOW TO RUN
-- 1 Intizialize Node Modules by -
+- 1 Initizialize Node Modules by -
 ```
 npm install
 ```
