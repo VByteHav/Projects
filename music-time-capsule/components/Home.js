@@ -61,7 +61,7 @@ const Home = () => {
               {
                 icon: '🔒',
                 title: 'Api Inegration',
-                text: ' All powered by the Spotify API and a sleek, user-friendly interface."'
+                text: ' All powered by the Spotify API and a sleek, user-friendly interface.'
               }
             ].map((feature, index) => (
               <motion.li

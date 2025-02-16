@@ -1,8 +1,10 @@
 import React from 'react'
 import Dashboard from '@/components/Dash'
+import Navbar from '@/components/Navbar'
 const page = () => {
   return (
     <div>
+            <Navbar/>
       <Dashboard/>
     </div>
   )
