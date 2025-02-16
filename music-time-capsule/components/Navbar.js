@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className="bg-black text-white px-6 py-4">
       <div className="container mx-auto flex justify-between items-center">
- 
+        {/* Logo */}
         <div className="text-2xl hover:text-green-400 font-bold tracking-wide">MT-Capsule</div>
 
         {/* Desktop Menu */}

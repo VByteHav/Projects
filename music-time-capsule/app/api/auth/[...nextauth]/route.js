@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify";
 import axios from "axios";
 
-
+// Spotify Token Refresh Function
 async function refreshAccessToken(token) {
   try {
     const response = await axios.post(
@@ -43,7 +43,7 @@ export const authOptions = {
             "user-top-read",
             "user-read-recently-played",
           ].join(" "),
-          show_dialog: true, 
+          show_dialog: true, // Always ask user to pick account
         },
       },
     }),
@@ -70,18 +70,18 @@ export const authOptions = {
     async session({ session, token }) {
       session.accessToken = token.accessToken;
       session.refreshToken = token.refreshToken;
-      session.error = token.error || null; 
+      session.error = token.error || null; // Pass any errors to frontend
       return session;
     },
 
     async redirect({ url, baseUrl }) {
-      return "/dashboard";
+      return "/dashboard"; // Redirect to dashboard after login
     },
   },
 
   pages: {
-    signIn: "/login", 
-    error: "/auth/error",
+    signIn: "/login", // Custom login page
+    error: "/auth/error", // Custom error page
   },
 
   secret: process.env.NEXTAUTH_SECRET,

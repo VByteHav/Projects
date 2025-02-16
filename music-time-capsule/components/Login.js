@@ -9,6 +9,7 @@ export default function Login() {
   const { data: session } = useSession();
   const router = useRouter();
 
+  // Redirect logged-in users to the dashboard
   useEffect(() => {
     if (session) {
       router.push("/dashboard");
@@ -23,13 +24,13 @@ export default function Login() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-
+        {/* Logo / Title */}
         <h1 className="text-3xl font-bold mb-4 text-green-400">MT-Capsule</h1>
         <p className="text-gray-300 mb-6">
           Log in with Spotify to explore your personalized music experience.
         </p>
 
-
+        {/* Login Button */}
         <button
           onClick={() => signIn("spotify", { callbackUrl: "/dashboard" })}
           className="bg-green-500 hover:bg-green-400 text-black font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/30 flex items-center justify-center gap-2 w-full"
@@ -37,7 +38,7 @@ export default function Login() {
           <span>Login with Spotify</span> 🎵
         </button>
 
-
+        {/* Additional Info */}
         <p className="text-gray-400 text-sm mt-4">
           Don't worry, we never post anything on your behalf!
         </p>
