@@ -5,10 +5,10 @@
 - Make Sure npm is installed
 - Add these environmental Variables
   ```
-SPOTIFY_CLIENT_ID=your_client_id
-SPOTIFY_CLIENT_SECRET=your_client_secret
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your_secret
+      SPOTIFY_CLIENT_ID=your_client_id
+      SPOTIFY_CLIENT_SECRET=your_client_secret
+      NEXTAUTH_URL=http://localhost:3000
+     NEXTAUTH_SECRET=your_secret
     ```   
   
 ## How to run 
@@ -19,6 +19,6 @@ NEXTAUTH_SECRET=your_secret
   ```
 - Run one localHost by
   ```
-npm run dev 
+  npm run dev 
 
   ```
